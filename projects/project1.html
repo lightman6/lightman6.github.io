@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文古诗生成器 - 项目详情</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="project-header">
+            <a href="../index.html" class="back-link">← 返回主页</a>
+            <h1>🎨 中文古诗生成器</h1>
+        </div>
+
+        <div class="section">
+            <h2>项目简介</h2>
+            <p>
+                本项目基于 GPT-2 模型，在超过 10 万首古典诗词上进行微调，支持五言、七言及风格控制（如“豪放”、“婉约”）。
+                生成结果流畅、押韵、符合古典格律，可用于教育、创作辅助或文化娱乐。
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>📊 使用数据集</h2>
+            <ul>
+                <li><strong>名称：</strong>Chinese Classical Poetry Corpus (CCPC)</li>
+                <li><strong>规模：</strong>108,321 首诗词（唐、宋、元、明、清）</li>
+                <li><strong>预处理：</strong>繁体转简体、标点统一、按朝代/作者分类</li>
+                <li><strong>来源：</strong>公开爬取 + 人工校对</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧠 模型架构</h2>
+            <p>
+                基础模型：GPT-2 (small, 117M 参数)<br>
+                微调方式：LoRA 低秩适配 + 分层学习率<br>
+                训练框架：Hugging Face Transformers + PyTorch<br>
+                最大序列长度：128 tokens
+            </p>
+            <!-- 可选：添加模型结构图 -->
+            <!-- <img src="../images/gpt2-architecture.png" alt="GPT-2 架构图" style="max-width: 100%;"> -->
+        </div>
+
+        <div class="section">
+            <h2>📈 生成结果展示</h2>
+            <blockquote>
+                <p><strong>输入提示：</strong>“春风又绿江南岸”</p>
+                <p><strong>模型生成：</strong><br>
+                春风又绿江南岸，<br>
+                明月何时照我还。<br>
+                烟波江上使人愁，<br>
+                孤帆远影碧空山。</p>
+            </blockquote>
+            <p>模型能较好延续意境与押韵，部分生成结果已接近人类创作水平。</p>
+        </div>
+
+        <div class="section">
+            <h2>🔗 在线体验</h2>
+            <p>点击下方按钮，在 Hugging Face Space 中直接体验模型：</p>
+            <a href="https://huggingface.co/spaces/yourusername/chinese-poem-generator" target="_blank" class="huggingface-link">
+                → 在 Hugging Face 上体验此模型
+            </a>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 Your Name. <a href="../index.html">返回主页</a></p>
+        </footer>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文古诗生成器 - 项目详情</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+</html>
