@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MobileNet - 项目详情</title>
     <link rel="stylesheet" href="../css/style.css?ts=202509152356"> <!-- 添加时间戳以防缓存 -->
+    <meta name="description" content="MobileNet 轻量化图像分类网络：适合移动端与嵌入式的高效模型，支持 ImageNet 1000 类分类。">
 </head>
 <body>
     <div class="container">
@@ -37,12 +38,12 @@
                 <strong>核心思想：</strong>使用<strong>深度可分离卷积（Depthwise Separable Convolution）</strong>替代传统卷积。
                 <br><br>
                 该结构将标准卷积拆分为两步：
-                <ol>
-                    <li><strong>Depthwise Convolution：</strong>对每个通道单独做 3×3 卷积。</li>
-                    <li><strong>Pointwise Convolution：</strong>使用 1×1 卷积将各通道线性组合。</li>
-                </ol>
-                这种方式相比普通卷积可减少约 <strong>8~9 倍</strong> 的计算量。
             </p>
+            <ol>
+                <li><strong>Depthwise Convolution：</strong>对每个通道单独做 3×3 卷积。</li>
+                <li><strong>Pointwise Convolution：</strong>使用 1×1 卷积将各通道线性组合。</li>
+            </ol>
+            <p>这种方式相比普通卷积可减少约 <strong>8~9 倍</strong> 的计算量。</p>
             <!-- 可选：模型结构示意图 -->
             <!-- <img src="../images/mobilenet-architecture.png" alt="MobileNet 架构图" style="max-width: 100%;"> -->
         </div>
@@ -67,32 +68,15 @@
 
         <div class="section">
             <h2>🔗 在线体验</h2>
-<<<<<<< HEAD
             <p>点击下方按钮，在 Hugging Face Space 中直接体验 MobileNet 实时图像分类：</p>
             <a href="https://huggingface.co/spaces/DZyang/mobilenet-demo" target="_blank" class="huggingface-link">
                 → 在 Hugging Face 上体验 MobileNet
-=======
-            <p>点击下方按钮，在 Hugging Face Space 中直接体验模型：</p>
-            <a href="https://huggingface.co/spaces/DZyang/mobilenet-demo" target="_blank" class="huggingface-link">
-                → 在 Hugging Face 上体验此模型
->>>>>>> d8444f80fe606565d80e668092ec37e2272a1b68
             </a>
         </div>
 
         <footer class="footer">
-            <p>© 2025 Your Name. <a href="../index.html">返回主页</a></p>
+            <p>© 2025 Zhengyang Dong. <a href="../index.html">返回主页</a></p>
         </footer>
     </div>
 </body>
-<<<<<<< HEAD
-=======
-</html><!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中文古诗生成器 - 项目详情</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
->>>>>>> d8444f80fe606565d80e668092ec37e2272a1b68
 </html>

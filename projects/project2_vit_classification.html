@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>基础分类（ImageNet 1000 类） - 项目详情</title>
+  <meta name="description" content="基于 ViT (google/vit-base-patch16-224) 的图像分类：上传图片，输出 ImageNet 1000 类标签。" />
+  <link rel="stylesheet" href="../css/style.css?ts=202509152356" />
+</head>
+<body>
+  <div class="container">
+    <div class="project-header">
+      <a class="back-link" href="../index.html">← 返回主页</a>
+      <h1>📚 基础分类 · ImageNet 1000 类</h1>
+    </div>
+
+    <div class="section">
+      <h2>项目简介</h2>
+      <p>
+        这是一个“十分钟上手”的经典入门任务：将图像分类到 ImageNet 的 1000 个类别之一。
+        我提供了基于 Vision Transformer 的推理 Demo，模型来自 Hugging Face：
+        <code>google/vit-base-patch16-224</code>。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>亮点</h2>
+      <ul>
+        <li>经典任务，效果直观，类别覆盖全面（1000 类）。</li>
+        <li>推理速度快，可直接在 CPU 上体验。</li>
+        <li>页面与交互极简，方便快速复用到其他分类任务。</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>模型与原理</h2>
+      <p>
+        使用公开预训练的 Vision Transformer (ViT) 模型进行图像特征编码，通过分类头输出 Top-K 结果。
+        与传统 CNN（如 ResNet/MobileNet）相比，ViT 在大数据预训练后具有更强的全局建模能力。
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🔗 在线体验</h2>
+      <p>点击下方按钮，打开 Hugging Face 模型卡与官方演示 Space：</p>
+      <p><a class="huggingface-link" href="https://huggingface.co/google/vit-base-patch16-224" target="_blank">→ 模型卡：google/vit-base-patch16-224</a></p>
+      <p><a class="huggingface-link" href="https://huggingface.co/spaces/huggingface-projects/image-classification" target="_blank">→ 通用图像分类在线体验（可 fork）</a></p>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 Zhengyang Dong. <a href="../index.html">返回主页</a></p>
+    </footer>
+  </div>
+</body>
+</html>
