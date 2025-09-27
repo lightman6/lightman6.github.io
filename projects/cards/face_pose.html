@@ -1,0 +1,56 @@
+<article class="proj-card" data-title="人脸+姿态估计">
+  <h3>👤 人脸检测 + 姿态估计</h3>
+  <p class="lead">Face Alignment · Keypoints Skeleton · 行为/表情上游特征</p>
+
+  <details open>
+    <summary>为什么需要?</summary>
+    <ul>
+      <li>AR / 滤镜 / 表情驱动基础。</li>
+      <li>健身 / 动作分析骨架输入。</li>
+      <li>安全监控 / 交互入口。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心组件</summary>
+    <ul>
+      <li>人脸：RetinaFace / Mediapipe</li>
+      <li>人体：MMPose / OpenPose</li>
+      <li>可扩展：手部 / 面部 3D / 姿势分类</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>管线结构</summary>
+    <ul>
+      <li>图像 / 视频帧采集</li>
+      <li>多任务推理（并行或级联）</li>
+      <li>关键点后处理 & 归一化</li>
+      <li>下游（动作 / 表情 / 识别）</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>裁剪 + 缩放提升关键点精度。</li>
+      <li>轻量模型支持实时摄像头。</li>
+      <li>骨架平滑：EMA / Kalman 过滤。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>运动与康复分析</li>
+      <li>人机交互 (HCI)</li>
+      <li>智能筛查 / 课堂姿态</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/Mediapipe-Face-Detection">人脸 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/mmpose">姿态 Demo</a>
+    <a class="mini-btn" href="projects/project5_face_pose.html">完整介绍</a>
+  </p>
+</article>

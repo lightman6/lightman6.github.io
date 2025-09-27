@@ -1,0 +1,54 @@
+<article class="proj-card" data-title="超分辨率">
+  <h3>🧩 图像超分辨率 (Real-ESRGAN)</h3>
+  <p class="lead">低清 → 高清 · 纹理恢复 · 适配老照片 / 游戏截图 / 动漫帧</p>
+
+  <details open>
+    <summary>为什么做超分?</summary>
+    <ul>
+      <li>老照片 / 监控画面可读性提升。</li>
+      <li>前处理增强下游识别精度。</li>
+      <li>与上色 / 修复串联形成增强流水线。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心方法</summary>
+    <ul>
+      <li>生成对抗 + 感知损失平衡真实感与细节。</li>
+      <li>针对真实退化的合成策略 (Real-ESRGAN)。</li>
+      <li>多域模型：通用 / 动漫 / 人像。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>与传统插值比较</summary>
+    <ul>
+      <li>插值：仅平滑放大，无法补细节。</li>
+      <li>ESRGAN：合成纹理，主观清晰度更高。</li>
+      <li>风险：过度“幻想”需与业务验证。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>批量小图：可合并拼接减少边缘伪影。</li>
+      <li>真人/动漫需选择对应模型避免失真。</li>
+      <li>与去噪联合可减少噪声放大。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>影像修复</li>
+      <li>OCR 前处理</li>
+      <li>视频帧增强</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/Real-ESRGAN">在线 Demo</a>
+    <a class="mini-btn" href="projects/project6_sr.html">完整介绍</a>
+  </p>
+</article>

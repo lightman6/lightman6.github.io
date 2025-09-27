@@ -234,6 +234,67 @@ blockquote {
   text-decoration: underline;
 }
 
+/* ========= 滑动卡片样式（首页项目轮播） ========= */
+.proj-slider { position: relative; }
+.proj-viewport { overflow:hidden; border:1px solid var(--border-color); border-radius:14px; background:var(--card-bg); }
+.proj-track { display:flex; transition:transform .5s cubic-bezier(.4,.1,.2,1); width:100%; }
+.proj-slide { flex:0 0 100%; padding:34px 36px 48px; }
+.proj-slide:not(:last-child){ border-right:0; }
+
+.proj-controls { display:flex; align-items:center; gap:12px; margin:18px 6px 10px; flex-wrap:wrap; }
+.proj-controls button { background:var(--accent-color); color:#fff; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; font-weight:500; transition:background .25s, opacity .25s; }
+.proj-controls button[disabled]{ opacity:.35; cursor:not-allowed; }
+.proj-controls button:hover:not([disabled]){ background:#000; }
+.proj-counter { font-size:.85rem; color:#555; min-width:64px; text-align:center; }
+
+.proj-dots { display:flex; gap:6px; flex-wrap:wrap; margin-top:4px; }
+.proj-dots button { width:12px; height:12px; border-radius:50%; border:1px solid var(--accent-color); background:transparent; cursor:pointer; padding:0; transition:background .3s, transform .3s; }
+.proj-dots button.active { background:var(--accent-color); transform:scale(1.15); }
+.proj-dots button:hover { background:var(--accent-color); }
+
+/* 片段内部卡片 */
+.proj-card h3 { font-size:1.5rem; margin-bottom:8px; color:var(--accent-color); }
+.proj-card .lead { margin-bottom:16px; font-weight:500; color:#444; }
+.mini-btn { display:inline-block; background:var(--accent-color); color:#fff; text-decoration:none; padding:6px 14px; border-radius:4px; font-size:.8rem; margin-top:4px; }
+.mini-btn:hover { background:#000; }
+
+/* details 折叠样式 */
+details { border:1px solid var(--border-color); border-radius:8px; padding:10px 14px 12px; background:#fff; margin-bottom:14px; position:relative; }
+details[open]{ box-shadow:0 2px 6px rgba(0,0,0,.05); }
+details summary { cursor:pointer; font-weight:600; list-style:none; }
+details summary::-webkit-details-marker{ display:none; }
+details summary::after { content:'+'; position:absolute; right:16px; top:12px; font-weight:400; }
+details[open] summary::after { content:'−'; }
+
+/* 修正 details 中列表项目(li) 看起来“跑出”边框的问题：
+   1. 统一内边距与列表位置
+   2. 让圆点位于容器内部（inside）
+   3. 防止长英文/代码溢出（换行） */
+details ul, details ol { 
+  list-style-position: inside; 
+  padding-left: 0; 
+  margin: 6px 0 4px; 
+}
+details li { 
+  margin: 2px 0; 
+  line-height: 1.5; 
+  word-break: break-word; 
+  /* 对非常长的连续字符串进一步安全换行 */
+  overflow-wrap: anywhere; 
+}
+
+@media (max-width: 680px){
+  .proj-slide { padding:26px 22px 44px; }
+  .proj-card h3 { font-size:1.3rem; }
+  .proj-controls { gap:8px; }
+}
+
+/* file:// 回退模式 */
+.proj-fallback-list { padding:26px 24px 34px; background:var(--card-bg); border:1px solid var(--border-color); border-radius:14px; }
+.proj-fallback-list code { background:#eee; padding:2px 5px; border-radius:4px; }
+.proj-fallback-list a { color:var(--accent-color); text-decoration:none; }
+.proj-fallback-list a:hover { text-decoration:underline; }
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .project-grid {

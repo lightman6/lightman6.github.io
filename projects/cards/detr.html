@@ -1,0 +1,56 @@
+<article class="proj-card" data-title="DETR 目标检测">
+  <h3>🧠 DETR 端到端检测</h3>
+  <p class="lead">Transformer Encoder-Decoder · 匈牙利匹配 · 无需 NMS · Anchor-Free</p>
+
+  <details open>
+    <summary>为什么用 DETR?</summary>
+    <ul>
+      <li><strong>端到端：</strong>移除手工 Anchor 与后处理。</li>
+      <li><strong>统一范式：</strong>检测 = 集合预测问题。</li>
+      <li><strong>扩展性：</strong>易接 DINO / Deformable 改进。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心思想</summary>
+    <ul>
+      <li>Backbone 特征 → Transformer 进行全局关系建模。</li>
+      <li>固定数量 object queries 预测物体（或 no-object）。</li>
+      <li>匈牙利匹配最优分配预测与真实框。</li>
+    </ul>
+    <p style="font-size:.75rem;color:#555;">早期版本对小目标 & 收敛速度不友好 → Deformable 改进多尺度注意力。</p>
+  </details>
+
+  <details>
+    <summary>与 YOLO 对比</summary>
+    <ul>
+      <li>更易融入 Transformer 生态。</li>
+      <li>推理速度稍慢，但概念更整洁。</li>
+      <li>无手工 NMS / Anchor 调参。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>训练需更长 schedule（例如 500 epochs）。</li>
+      <li>小目标：优先考虑 Deformable DETR。</li>
+      <li>可蒸馏或使用混合优化策略加速收敛。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>研究端到端检测范式</li>
+      <li>需要可解释 token 交互分析</li>
+      <li>多任务拓展（检测+分割）</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/detr">在线 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/facebook/detr-resnet-50">模型卡</a>
+    <a class="mini-btn" href="projects/project4_detr.html">完整介绍</a>
+  </p>
+</article>

@@ -1,0 +1,55 @@
+<article class="proj-card" data-title="风格迁移">
+  <h3>🖼️ 快速风格迁移 (Fast Neural Style)</h3>
+  <p class="lead">一次前向生成 · 感知损失 · 多风格快速切换</p>
+
+  <details open>
+    <summary>为什么用?</summary>
+    <ul>
+      <li>实时滤镜体验（视频/直播）。</li>
+      <li>轻量部署，单模型多风格。</li>
+      <li>创意内容快速产出。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心思想</summary>
+    <ul>
+      <li>训练阶段匹配内容/风格统计（Gram 矩阵）。</li>
+      <li>推理阶段单次前向生成目标风格。</li>
+      <li>感知损失替代像素 L2 提升美学效果。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>与扩散模型比较</summary>
+    <ul>
+      <li>速度：本方法远快于逐步采样。</li>
+      <li>灵活性：扩散支持文生图/编辑；本法仅转换风格。</li>
+      <li>质量：扩散在复杂语义上更强。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>可用半精度提升吞吐。</li>
+      <li>多风格合并/条件控制减少模型数。</li>
+      <li>低分辨率先放大再迁移会丢质感，应先迁移后超分。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>短视频滤镜</li>
+      <li>创意海报生成</li>
+      <li>实时直播特效</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/fast-neural-style">在线 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://github.com/pytorch/examples/tree/main/fast_neural_style">源码</a>
+    <a class="mini-btn" href="projects/project8_style_transfer.html">完整介绍</a>
+  </p>
+</article>

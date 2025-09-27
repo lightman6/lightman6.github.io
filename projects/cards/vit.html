@@ -1,0 +1,58 @@
+<article class="proj-card" data-title="ViT 基础分类">
+  <h3>📚 ViT 图像分类</h3>
+  <p class="lead">Vision Transformer · Patch Embedding · 全局自注意力 · 1000 类 ImageNet</p>
+
+  <details open>
+    <summary>为什么用 ViT?</summary>
+    <ul>
+      <li><strong>全局建模：</strong>自注意力跨 patch 直接交互。</li>
+      <li><strong>更易迁移：</strong>大规模预训练后微调效果稳。</li>
+      <li><strong>结构简洁：</strong>摆脱手工卷积设计。</li>
+      <li><strong>对比基线：</strong>常与 ResNet / ConvNeXt 对比。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心思想</summary>
+    <ol style="margin-left:18px;">
+      <li>图像切分为固定大小 patch。</li>
+      <li>线性投影 + 位置编码 → token 序列。</li>
+      <li>多层 Transformer Encoder 进行全局特征融合。</li>
+      <li>[CLS] 或平均池化得到分类表征。</li>
+    </ol>
+    <p style="font-size:.8rem;color:#555;">缺点：小数据集上需强正则或蒸馏；对高分辨率成本高。</p>
+  </details>
+
+  <details>
+    <summary>与 CNN 对比</summary>
+    <ul>
+      <li>无需卷积感受野堆叠 → 一步全局。</li>
+      <li>参数/计算对分辨率敏感，需 Patch 优化。</li>
+      <li>后续演化：Swin / ConvNeXt 等融合优点。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>Base 模型 224×224 Top-1 ≈ 81%+</li>
+      <li>通过更大预训练数据（JFT）进一步提升</li>
+      <li>Fine-tune 时可降低学习率 + 余弦调度</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>需要研究型对比（CNN vs Transformer）</li>
+      <li>多任务统一 backbone</li>
+      <li>迁移学习 / 少样本微调</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/huggingface-projects/image-classification">在线 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/google/vit-base-patch16-224">模型卡</a>
+    <a class="mini-btn" href="projects/project2_vit_classification.html">完整介绍</a>
+  </p>
+</article>

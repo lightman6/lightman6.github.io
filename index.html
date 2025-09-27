@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Projects Showcase</title>
-    <link rel="stylesheet" href="css/style.css?ts=202509152211"> <!-- 添加时间戳以防缓存 -->
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI 模型展示</title>
+        <meta name="theme-color" content="#6366f1" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
 <body>
     <div class="container">
         <header class="header">
@@ -30,67 +33,24 @@
         </section>
 
         <section class="projects">
-            <h2>我的项目</h2>
-            <div class="project-grid">
-
-                <!-- 项目1：MobileNet 分类 -->
-                <div class="project-card">
-                    <h3>MobileNet 图像分类</h3>
-                    <p>轻量高效 · ImageNet 1000 类。</p>
-                    <a href="projects/project1.html" class="btn">查看详情</a>
+            <h2>我的项目（滑动查看）</h2>
+            <div id="proj-slider" class="proj-slider">
+                <div class="proj-viewport">
+                    <div class="proj-track"><!-- Slides via fetch --></div>
                 </div>
-
-                <!-- 项目2：ViT 分类 -->
-                <div class="project-card">
-                    <h3>ViT 基础分类</h3>
-                    <p>google/vit-base-patch16-224 · 经典入门。</p>
-                    <a href="projects/project2_vit_classification.html" class="btn">查看详情</a>
+                <div class="proj-controls">
+                    <button class="proj-prev" aria-label="上一项">←</button>
+                    <span class="proj-counter" aria-live="polite">0 / 0</span>
+                    <button class="proj-next" aria-label="下一项">→</button>
+                    <button class="proj-toggle" type="button">全部折叠</button>
                 </div>
-
-                <!-- 项目3：YOLO 检测 -->
-                <div class="project-card">
-                    <h3>YOLO 目标检测</h3>
-                    <p>YOLOv5 / YOLOv8 · 快速部署与体验。</p>
-                    <a href="projects/project3_yolov5.html" class="btn">查看详情</a>
-                </div>
-
-                <!-- 项目4：DETR 检测 -->
-                <div class="project-card">
-                    <h3>DETR 目标检测</h3>
-                    <p>Transformer 风格 · facebook/detr-resnet-50。</p>
-                    <a href="projects/project4_detr.html" class="btn">查看详情</a>
-                </div>
-
-                <!-- 项目5：人脸+姿态 -->
-                <div class="project-card">
-                    <h3>人脸检测 + 姿态估计</h3>
-                    <p>retinaface/mediapipe · mmpose/openpose。</p>
-                    <a href="projects/project5_face_pose.html" class="btn">查看详情</a>
-                </div>
-
-                <!-- 项目6：超分辨率 -->
-                <div class="project-card">
-                    <h3>Real-ESRGAN 超分辨率</h3>
-                    <p>低清变高清 · nateraw/real-esrgan。</p>
-                    <a href="projects/project6_sr.html" class="btn">查看详情</a>
-                </div>
-
-                <!-- 项目7：黑白上色 -->
-                <div class="project-card">
-                    <h3>黑白图像上色</h3>
-                    <p>richzhang/colorization · 视觉增强。</p>
-                    <a href="projects/project7_colorization.html" class="btn">查看详情</a>
-                </div>
-
-                <!-- 项目8：风格迁移 -->
-                <div class="project-card">
-                    <h3>快速风格迁移</h3>
-                    <p>梵高/莫奈风格 · PyTorch 示例。</p>
-                    <a href="projects/project8_style_transfer.html" class="btn">查看详情</a>
-                </div>
-
+                <div class="proj-dots" aria-label="项目导航"></div>
             </div>
+            <noscript>
+                <p style="margin-top:16px;color:#a00;">⚠ 已禁用 JavaScript：无法加载滑动卡片，请打开 JS 或访问 projects 下各页面。</p>
+            </noscript>
         </section>
+        <script src="js/slider.js" defer></script>
 
         <footer class="footer">
             <p style="font-style: italic; color: #777; margin-top: 20px;">

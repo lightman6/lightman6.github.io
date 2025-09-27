@@ -1,0 +1,55 @@
+<article class="proj-card" data-title="黑白上色">
+  <h3>🎨 黑白图像自动上色</h3>
+  <p class="lead">Lab 空间预测 · 语义引导色彩填充 · 老照片修复增强</p>
+
+  <details open>
+    <summary>为什么要上色?</summary>
+    <ul>
+      <li>历史影像可视化提升可读性。</li>
+      <li>增强用户情感共鸣。</li>
+      <li>与超分/修复组合提升整体质量。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心思想</summary>
+    <ul>
+      <li>预测 ab 通道，L 通道保持原始亮度。</li>
+      <li>语义特征辅助避免颜色漂移。</li>
+      <li>可后处理再调色阶/饱和度。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>与手工上色比较</summary>
+    <ul>
+      <li>自动化效率高。</li>
+      <li>精细区域可手动微调。</li>
+      <li>风险：某些语义猜错导致偏色。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>模糊/低清图先超分再上色。</li>
+      <li>人像可叠加肤色/背景分割优化。</li>
+      <li>老照片噪点需先去噪或修复。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>影像修复工作流</li>
+      <li>内容创作增强</li>
+      <li>档案数字化展示</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/Image-Colorization">在线 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/richzhang/colorization">模型卡</a>
+    <a class="mini-btn" href="projects/project7_colorization.html">完整介绍</a>
+  </p>
+</article>

@@ -1,0 +1,58 @@
+<article class="proj-card" data-title="MobileNet 图像分类">
+  <h3>⚡ MobileNet 图像分类</h3>
+  <p class="lead">专为移动与嵌入式设计的轻量化 CNN · 低计算 / 低功耗 / 高吞吐 · 支持 ImageNet 1000 类。</p>
+
+  <details open>
+    <summary>为什么选 MobileNet?</summary>
+    <ul>
+      <li><strong>轻量化：</strong>参数量 & FLOPs 远低于 VGG / ResNet。</li>
+      <li><strong>推理快：</strong>CPU / ARM 上也能接近实时。</li>
+      <li><strong>可缩放：</strong>Width / Resolution Multiplier 精度 ↔ 速度平衡。</li>
+      <li><strong>生态广：</strong>常用于检测、分割、姿态等任务的主干骨干(backbone)。</li>
+    </ul>
+  </details>
+
+  <details open>
+    <summary>核心思想：Depthwise Separable Conv</summary>
+    <p style="margin-bottom:10px;">将标准卷积拆为两步，显著降低计算量：</p>
+    <ol style="margin-left:18px;">
+      <li><strong>Depthwise：</strong>对每个输入通道单独做 3×3。</li>
+      <li><strong>Pointwise：</strong>用 1×1 卷积线性组合各通道。</li>
+    </ol>
+    <p style="font-size:.85rem;color:#555;">相比普通卷积可减少约 <strong>8~9 倍</strong> 计算。V2 再加入 Inverted Residual + Linear Bottleneck，V3 融合注意力与 NAS 搜索。</p>
+  </details>
+
+  <details>
+    <summary>与其他网络比较</summary>
+    <ul>
+      <li><strong>VS VGG：</strong>从上亿参数降至几百万，速度数量级提升。</li>
+      <li><strong>VS ResNet：</strong>精度略低但更省资源，移动端友好。</li>
+      <li><strong>VS EfficientNet：</strong>MobileNet 率先提出轻量化思路；EfficientNet 在复合缩放上更系统。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能速览</summary>
+    <p style="margin:0 0 6px;">ImageNet Top-1：</p>
+    <ul>
+      <li>V1：≈70.6% · 4.2M 参数</li>
+      <li>V2：≈72%+（Inverted Residual / Bottleneck）</li>
+      <li>V3：更低延迟（注意力 + NAS）</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>移动端即时分类 / 预处理</li>
+      <li>边缘设备（树莓派 / Jetson Nano）</li>
+      <li>作为检测 / 分割主干骨干</li>
+      <li>需要快速迭代与在线 A/B 的轻量模型</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/DZyang/mobilenet-demo">在线 Demo</a>
+    <a class="mini-btn" href="projects/project1.html">完整介绍</a>
+  </p>
+</article>

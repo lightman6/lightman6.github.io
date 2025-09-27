@@ -1,0 +1,56 @@
+<article class="proj-card" data-title="YOLO 目标检测">
+  <h3>🏷️ YOLO 实时目标检测</h3>
+  <p class="lead">YOLOv5 / YOLOv8 · 单阶段检测 · 速度 / 精度平衡 · 多任务扩展</p>
+
+  <details open>
+    <summary>为什么用 YOLO?</summary>
+    <ul>
+      <li><strong>实时性：</strong>高 FPS，适合边缘/摄像头场景。</li>
+      <li><strong>部署友好：</strong>轻松导出 ONNX / TensorRT / TFLite。</li>
+      <li><strong>社区生态：</strong>教程 & 预训练权重丰富。</li>
+      <li><strong>多任务：</strong>检测 + 分割 + 姿态 + 旋转框。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>核心思想</summary>
+    <ul>
+      <li>单阶段直接预测边界框和类别概率。</li>
+      <li>跨尺度特征融合 (FPN / PAN)。</li>
+      <li>IoU / CIoU / DFL 损失提升定位质量。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>与两阶段比较</summary>
+    <ul>
+      <li>对比 Faster R-CNN：更快但对小目标略逊。</li>
+      <li>对比 Anchor-Free：仍保持 Anchor 友好方案（v8 引入 task head 简化）。</li>
+      <li>v8 以后：改进类别/框解耦，提升泛化。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>性能提示</summary>
+    <ul>
+      <li>选择 s / m / l / x 平衡计算 & 精度。</li>
+      <li>混合精度 (FP16) 可再提速 20~40%。</li>
+      <li>导出 TensorRT 后延迟显著下降。</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>适用场景</summary>
+    <ul>
+      <li>工业/安防实时检测</li>
+      <li>无人机 / 交通监控</li>
+      <li>轻量端到端推理 Demo</li>
+    </ul>
+  </details>
+
+  <p>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/joaogui1/yolov5">YOLOv5 Demo</a>
+    <a class="mini-btn" target="_blank" href="https://huggingface.co/spaces/akhaliq/YOLOv8">YOLOv8 Demo</a>
+    <a class="mini-btn" href="projects/project3_yolov5.html">完整介绍</a>
+  </p>
+</article>
